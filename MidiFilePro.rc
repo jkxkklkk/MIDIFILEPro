@@ -1,0 +1,292 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MidiFilePro.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MidiFilePro.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 MidiFilePro"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "MidiFilePro 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_MIDIFILEPRO_DIALOG DIALOGEX 0, 0, 341, 251
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MIDI播放器"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Custom1",IDC_CUSTOM_PIANO,"PianoCtrl",WS_TABSTOP,7,7,
+                    327,24
+    CONTROL         "Slider1",IDC_SLD_POS,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,3,78,210,13
+    CONTROL         "List1",IDC_MIDI_EVENT_LIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,141,327,105
+    PUSHBUTTON      "打开",IDC_BUTN_OPEN,7,97,62,16,BS_FLAT
+    PUSHBUTTON      "播放",IDC_BUTN_PLAY,76,97,68,16,BS_FLAT
+    PUSHBUTTON      "暂停",IDC_BUTN_PAUSE,150,97,60,16,BS_FLAT
+    COMBOBOX        IDC_COMBO_MIDI_OUT,223,123,111,30,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Slider2",IDC_SLD_VOLUME,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,238,46,12,58
+    CONTROL         "Slider2",IDC_SLD_PAN,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,275,46,12,58
+    CONTROL         "Slider2",IDC_SLD_TEMPO,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,314,46,12,58
+    LTEXT           "音量",IDC_STATIC_VOLUME,235,106,17,8
+    LTEXT           "相位",IDC_STATIC_PAN,273,105,17,8
+    LTEXT           "速度",IDC_STATIC_TEMPO,311,105,17,8
+    CONTROL         "播放是否显示键盘按键",IDC_CHECK_SHOW_KEYS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,42,96,10
+    EDITTEXT        IDC_EDIT_NAME,111,42,98,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "删除重叠MIDI码",IDC_BUTN_REMOVE,76,119,68,16,BS_FLAT
+    PUSHBUTTON      "屏蔽播放通道",IDC_BUTN_MUTE,7,119,62,16,BS_FLAT
+    PUSHBUTTON      "打印MIDI信息",IDC_BUTN_PRINT,150,119,60,16,BS_FLAT
+    EDITTEXT        IDC_EDIT_BPM,59,60,46,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_SIGNATURE,8,60,46,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_DIVISION,111,60,98,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_PLAY_MUTE_DIALOG DIALOG DISCARDABLE  0, 0, 196, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "播放通道"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,120,55,16
+    PUSHBUTTON      "Cancel",IDCANCEL,116,120,55,16
+    CONTROL         "Ch1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,27,40,10
+    CONTROL         "Ch2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    59,27,31,10
+    CONTROL         "Ch3",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    105,27,33,10
+    CONTROL         "Ch4",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,27,31,10
+    CONTROL         "Ch5",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,46,40,10
+    CONTROL         "Ch6",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    59,46,32,10
+    CONTROL         "Ch7",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    105,46,31,10
+    CONTROL         "Ch8",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,46,32,10
+    CONTROL         "Ch9",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,66,40,10
+    CONTROL         "Ch10",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    59,66,32,10
+    CONTROL         "Ch11",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    105,66,31,10
+    CONTROL         "Ch12",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,66,32,10
+    CONTROL         "Ch13",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,86,40,10
+    CONTROL         "Ch14",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    59,86,33,10
+    CONTROL         "Ch15",IDC_CHECK15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    105,86,31,10
+    CONTROL         "Ch16",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,86,31,10
+    GROUPBOX        "选择播放的通道",IDC_STATIC,7,7,182,101,BS_CENTER
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MidiFilePro Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MidiFilePro\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2008\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MidiFilePro.EXE\0"
+            VALUE "ProductName", "MidiFilePro 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MIDIFILEPRO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 334
+        TOPMARGIN, 7
+    END
+
+    IDD_PLAY_MUTE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "res\\default1.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 MidiFilePro(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\MidiFilePro.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
